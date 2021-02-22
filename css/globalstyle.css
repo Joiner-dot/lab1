@@ -1,0 +1,223 @@
+@media screen {
+    html {
+        height: 100%;
+    }
+
+    body {
+        padding: 2%;
+        background-color: #dbdbdb;
+    }
+
+    #thisweater {
+        display: block;
+        width: 100%;
+    }
+
+    #weatrernow {
+        font-size: 5vmin;
+        display: inline;
+    }
+
+    #currentlocation {
+        font-size: 5vmin;
+    }
+
+
+    #locationburron {
+        display: inline;
+        font-size: 2vmin;
+        margin-left: 30%;
+        background-color: silver;
+        padding: 1%;
+        border-radius: 20px;
+    }
+
+    #currentlocationicon {
+        width: 7%;
+        height: 7%;
+    }
+
+    #currentgrad {
+        display: inline;
+        font-size: 20vmin;
+        margin-left: 5%;
+    }
+
+    #contain {
+        float: right;
+        font-size: 75%;
+        color: white;
+        width: 40%;
+    }
+
+    .wind {
+        background-color: gray;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        height: 4vmin;
+    }
+
+    .hh {
+        display: inline;
+        font-size: 3vmin;
+        float: left;
+        margin: 0;
+        vertical-align: center;
+    }
+
+
+    h3 {
+        display: inline;
+        margin: 0;
+        float: right;
+        font-size: 3vmin;
+        vertical-align: center;
+    }
+
+    #mycities {
+        display: inline;
+        text-align: left;
+        font-size: 4vmin;
+        vertical-align: top;
+
+    }
+
+    #plus {
+        display: inline;
+        float: right;
+        font-size: 4vmin;
+        width: 60%;
+    }
+
+    #plusplus {
+        display: inline;
+        float: right;
+        background-color: gray;
+        border-radius: 50%;
+        padding: 1%;
+        width: 6vmin;
+        height: 6vmin;
+        font-size: 70%;
+        margin-right: 1%;
+        color: white;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    html {
+        height: 100%;
+    }
+
+    body {
+        padding: 2%;
+        background-color: #dbdbdb;
+    }
+
+    #thisweater {
+        display: block;
+        width: 100%;
+    }
+
+    #weatrernow {
+        font-size: 5vmin;
+        display: inline;
+    }
+
+    #currentlocation {
+        font-size: 5vmin;
+    }
+
+
+    #locationburron {
+        display: inline;
+        font-size: 2.5vmin;
+        background-color: silver;
+        padding: 1%;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    #currentlocationicon {
+        width: 20vmin;
+        height: 20vmin;
+        margin-left: 5%;
+    }
+
+    #currentgrad {
+        display: inline;
+        font-size: 20vmin;
+        margin-left: 20%;
+        vertical-align: top;
+    }
+
+    #contain {
+        float: right;
+        font-size: 75%;
+        color: #ffffff;
+        width: 100%;
+    }
+
+    .wind {
+        background-color: gray;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        height: 4vmin;
+    }
+
+    .hh {
+        display: inline;
+        font-size: 3vmin;
+        float: left;
+        margin: 0;
+        vertical-align: center;
+    }
+
+
+    h3 {
+        display: inline;
+        margin: 0;
+        float: right;
+        font-size: 3vmin;
+        vertical-align: center;
+    }
+
+    #mycities {
+        margin-top: 1.2em;
+        display: inline;
+        float: left;
+        font-size: 4vmin;
+    }
+
+    #plus {
+        margin-top: 1.2em;
+        display: inline;
+        float: right;
+        font-size: 4vmin;
+        width: 60%;
+    }
+
+    #plusplus {
+        display: inline;
+        float: right;
+        background-color: gray;
+        border-radius: 50%;
+        width: 6vmin;
+        height: 6vmin;
+        margin-right: 1%;
+        font-size: 70%;
+        color: white;
+    }
+}
+
+input {
+    font-size: 2vmin;
+    width: 50%;
+    padding: 2%;
+    float: right;
+    margin-right: 10%;
+}
+
+
