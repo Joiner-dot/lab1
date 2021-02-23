@@ -312,6 +312,11 @@ input {
     width: 100%;
 }
 
+#globalwrapper {
+    display: grid;
+    width: 100%;
+}
+
 ul {
     margin-left: 0;
     padding-left: 0;

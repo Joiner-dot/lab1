@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Weather</title>
@@ -7,12 +7,13 @@
     <script src="js/script.js"></script>
 </head>
 <body onresize="buttonwith()" onload="buttonwith()">
-<div id="wrapper">
-    <header>
-        <h1 id="weatrernow">Погода здесь</h1>
-        <button id="locationburron">Обновить геолокацию</button>
-    </header>
+<div id="globalwrapper">
+<header>
+    <h1 id="weatrernow">Погода здесь</h1>
+    <button id="locationburron">Обновить геолокацию</button>
+</header>
     <main>
+        <div id="wrapper">
         <div id="thisweater">
             <h2 id="currentlocation">Saint Petersburg</h2>
             <img id="currentlocationicon" src="image/day_clear.png">
@@ -219,7 +220,8 @@
                 </ul>
             </div>
         </div>
-</div>
+        </div>
 </main>
+</div>
 </body>
 </html>
