@@ -93,7 +93,7 @@
         margin-bottom: 0;
     }
 
-    #plusplus{
+    #plusplus {
         display: inline;
         float: right;
         background-color: gray;
@@ -104,14 +104,14 @@
         color: white;
     }
 
-    .otherweather{
+    .otherweather {
         display: inline;
         width: 90%;
         float: left;
         margin-top: 4em;
     }
 
-    .x{
+    .x {
         display: inline;
         float: right;
         background-color: gray;
@@ -122,7 +122,7 @@
         color: white;
     }
 
-    #othercities{
+    #othercities {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -238,12 +238,12 @@
         color: white;
     }
 
-    .otherweather{
+    .otherweather {
         width: 100%;
         float: left;
     }
 
-    .x{
+    .x {
         display: inline;
         float: right;
         background-color: gray;
@@ -256,7 +256,7 @@
         margin-top: 2%;
     }
 
-    #othercities{
+    #othercities {
         display: grid;
         grid-template-columns:1fr;
     }
@@ -270,40 +270,39 @@ input {
     margin-right: 10%;
 }
 
-.nameofothercity{
+.nameofothercity {
     display: inline;
     font-size: 3vmax;
 }
 
-.graofothercity{
+.graofothercity {
     display: inline;
     margin-left: 2vmax;
     font-size: 3.5vmax;
     float: none;
 }
 
-.othercityicon{
+.othercityicon {
     width: 3vmax;
     height: 3vmax;
-    margin-left:1vmax;
+    margin-left: 1vmax;
 }
 
 
-
-.details{
+.details {
     width: 100%;
     float: left;
     font-size: 75%;
     color: white;
 }
 
-#reloadicon{
+#reloadicon {
     width: 3vmax;
     height: 3vmax;
 
 }
 
-#wrapper{
+#wrapper {
     display: grid;
     width: 100%;
 }
@@ -313,7 +312,7 @@ ul {
     padding-left: 0;
 }
 
-#addcity{
+#addcity {
     margin-top: 3em;
 }
 
