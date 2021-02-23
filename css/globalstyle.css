@@ -56,6 +56,7 @@
         border-radius: 10px;
         margin: 10px;
         height: 2vmax;
+        list-style-type: none;
     }
 
     .hh {
@@ -183,6 +184,7 @@
         border-radius: 10px;
         margin: 10px;
         height: 4vmin;
+        list-style-type: none;
     }
 
     .hh {
@@ -286,6 +288,11 @@ input {
     width: 3vmax;
     height: 3vmax;
 
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
 }
 
 
