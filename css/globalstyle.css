@@ -104,8 +104,8 @@
         float: right;
         background-color: gray;
         border-radius: 50%;
-        width: 3.4vmax;
-        height: 3.4vmax;
+        width: 4vmax;
+        height: 4vmax;
         font-size: 1.5vmax;
         color: white;
         margin-right: 2%;
@@ -123,8 +123,8 @@
         float: right;
         background-color: gray;
         border-radius: 50%;
-        width: 3.4vmax;
-        height: 3.4vmax;
+        width: 2.7em;
+        height: 2.7em;
         font-size: 1.5vmax;
         color: white;
         margin-right: 2%;
@@ -134,7 +134,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 100px;
+        grid-column-gap: 5vmax;
     }
 
 }
