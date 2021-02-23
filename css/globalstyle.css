@@ -41,6 +41,7 @@
         display: inline;
         font-size: 12vmax;
         margin-left: 5%;
+        float: none;
     }
 
     #contain {
@@ -68,7 +69,7 @@
     }
 
 
-    h3 {
+    p {
         display: inline;
         margin: 0;
         float: right;
@@ -79,7 +80,7 @@
     #mycities {
         display: inline;
         text-align: left;
-        font-size: 4vmin;
+        font-size: 5vmin;
         vertical-align: top;
 
     }
@@ -89,7 +90,6 @@
         float: right;
         font-size: 4vmin;
         width: 60%;
-        margin-top: -0.625em;
         margin-bottom: 0;
     }
 
@@ -120,6 +120,11 @@
         height: 3.4vmax;
         font-size: 1.5vmax;
         color: white;
+    }
+
+    #othercities{
+        display: grid;
+        grid-column: 2;
     }
 
 }
@@ -169,6 +174,7 @@
         font-size: 20vmin;
         margin-left: 20%;
         vertical-align: top;
+        float: none;
     }
 
     #contain {
@@ -196,7 +202,7 @@
     }
 
 
-    h3 {
+    p {
         display: inline;
         margin: 0;
         float: right;
@@ -208,7 +214,7 @@
         margin-top: 1.2em;
         display: inline;
         float: left;
-        font-size: 4vmin;
+        font-size: 5vmin;
     }
 
     #plus {
@@ -267,6 +273,7 @@ input {
     display: inline;
     margin-left: 2vmax;
     font-size: 3.5vmax;
+    float: none;
 }
 
 .othercityicon{
@@ -290,11 +297,18 @@ input {
 
 }
 
+#wrapper{
+    display: grid;
+}
+
 ul {
     margin-left: 0;
     padding-left: 0;
 }
 
+#addcity{
+    margin-top: 3em;
+}
 
 
 
