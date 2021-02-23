@@ -6,11 +6,12 @@
 
     header{
         width: 100%;
+        margin: 0;
     }
 
     body {
-        padding: 2%;
         background-color: #dbdbdb;
+        padding: 2%;
     }
 
     #thisweater {
