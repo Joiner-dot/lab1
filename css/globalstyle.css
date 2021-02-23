@@ -255,6 +255,11 @@
         color: white;
         margin-top: 2%;
     }
+
+    #othercities{
+        display: grid;
+        grid-template-columns:1fr;
+    }
 }
 
 input {
