@@ -105,8 +105,8 @@
         float: right;
         background-color: gray;
         border-radius: 50%;
-        width: 4vmax;
-        height: 4vmax;
+        width: 2.1em;
+        height: 2.1em;
         font-size: 1.5vmax;
         color: white;
     }
@@ -123,8 +123,8 @@
         float: right;
         background-color: gray;
         border-radius: 50%;
-        width: 2.7em;
-        height: 2.7em;
+        width: 2.1em;
+        height: 2.1em;
         font-size: 1.5vmax;
         color: white;
     }
@@ -234,33 +234,12 @@
         width: 60%;
     }
 
-    #plusplus {
-        display: inline;
-        float: right;
-        background-color: gray;
-        border-radius: 50%;
-        width: 6vmin;
-        height: 6vmin;
-        font-size: 70%;
-        color: white;
-    }
 
     .otherweather {
         width: 100%;
         float: left;
     }
 
-    .x {
-        display: inline;
-        float: right;
-        background-color: gray;
-        border-radius: 50%;
-        width: 3em;
-        height: 3em;
-        font-size: 1.5vmax;
-        color: white;
-        margin-top: 2%;
-    }
 
     #othercities {
         display: grid;
