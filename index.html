@@ -5,220 +5,36 @@
     <title>Weather</title>
     <link rel="stylesheet" href="css/globalstyle.css">
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-<body onresize="buttonwith()" onload="buttonwith()">
+<body onresize="buttonwith()">
 
-    <header>
-        <h1 id="weatrernow">Погода здесь</h1>
-        <button id="locationburron">Обновить геолокацию</button>
-    </header>
-    <main>
-            <section id="thisweater">
-                <h2 id="currentlocation">Saint Petersburg</h2>
-                <img id="currentlocationicon" src="image/day_clear.png">
-                <p id="currentgrad">8°C</p>
-                <ul id="contain">
-                    <li class="wind">
-                        <p class="hh">Ветер</p>
-                        <p>Ветер</p>
-                    </li>
-                    <li class="wind">
-                        <p class="hh">Облачность</p>
-                        <p>hfufu</p>
-                    </li>
-                    <li class="wind">
-                        <p class="hh">Давление</p>
-                        <p>hfufu</p>
-                    </li>
-                    <li class="wind">
-                        <p class="hh">Влажность</p>
-                        <p>hfufu</p>
-                    </li>
-                    <li class="wind">
-                        <p class="hh">Координаты</p>
-                        <p>hfufu</p>
-                    </li>
-                </ul>
-            </section>
-            <div id="addcity">
-                <h2 id="mycities">Избранное</h2>
-                <div id="plus">
-                    <button id="plusplus">+</button>
-                    <label style="margin-right: 4%">
-                        <input placeholder="Введите название города">
-                    </label>
-                </div>
-            </div>
-            <section id="othercities">
-                <div class="otherweather">
-                    <h3 class="nameofothercity">Moscow</h3>
-                    <p class="graofothercity">5°C</p>
-                    <img class="othercityicon" src="image/day_clear.png">
-                    <button class="x">×</button>
-                    <ul class="details">
-                        <li class="wind">
-                            <p class="hh">Ветер</p>
-                            <p>Ветер</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Облачность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Давление</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Влажность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Координаты</p>
-                            <p>hfufu</p>
-                        </li>
-                    </ul>
-                </div>
-                <section class="otherweather">
-                    <h3 class="nameofothercity">Moscow</h3>
-                    <p class="graofothercity">5°C</p>
-                    <img class="othercityicon" src="image/day_clear.png">
-                    <button class="x">×</button>
-                    <ul class="details">
-                        <li class="wind">
-                            <p class="hh">Ветер</p>
-                            <p>Ветер</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Облачность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Давление</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Влажность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Координаты</p>
-                            <p>hfufu</p>
-                        </li>
-                    </ul>
-                </section>
-                <section class="otherweather">
-                    <h3 class="nameofothercity">Moscow</h3>
-                    <p class="graofothercity">5°C</p>
-                    <img class="othercityicon" src="image/day_clear.png">
-                    <button class="x">×</button>
-                    <ul class="details">
-                        <li class="wind">
-                            <p class="hh">Ветер</p>
-                            <p>Ветер</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Облачность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Давление</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Влажность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Координаты</p>
-                            <p>hfufu</p>
-                        </li>
-                    </ul>
-                </section>
-                <section class="otherweather">
-                    <h3 class="nameofothercity">Moscow</h3>
-                    <p class="graofothercity">5°C</p>
-                    <img class="othercityicon" src="image/day_clear.png">
-                    <button class="x">×</button>
-                    <ul class="details">
-                        <li class="wind">
-                            <p class="hh">Ветер</p>
-                            <p>Ветер</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Облачность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Давление</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Влажность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Координаты</p>
-                            <p>hfufu</p>
-                        </li>
-                    </ul>
-                </section>
-                <section class="otherweather">
-                    <h3 class="nameofothercity">Moscow</h3>
-                    <p class="graofothercity">5°C</p>
-                    <img class="othercityicon" src="image/day_clear.png">
-                    <button class="x">×</button>
-                    <ul class="details">
-                        <li class="wind">
-                            <p class="hh">Ветер</p>
-                            <p>Ветер</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Облачность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Давление</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Влажность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Координаты</p>
-                            <p>hfufu</p>
-                        </li>
-                    </ul>
-                </section>
-                <section class="otherweather">
-                    <h2 class="nameofothercity">Moscow</h2>
-                    <h2 class="graofothercity">5°C</h2>
-                    <img class="othercityicon" src="image/day_clear.png">
-                    <button class="x">×</button>
-                    <ul class="details">
-                        <li class="wind">
-                            <p class="hh">Ветер</p>
-                            <p>Ветер</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Облачность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Давление</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Влажность</p>
-                            <p>hfufu</p>
-                        </li>
-                        <li class="wind">
-                            <p class="hh">Координаты</p>
-                            <p>hfufu</p>
-                        </li>
-                    </ul>
-                </section>
-            </section>
-    </main>
+<header>
+    <h1 id="weatrernow">Погода здесь</h1>
+    <button id="locationburron" onclick="updatethisweather()">Обновить геолокацию</button>
+</header>
+<main>
+    <section id="thisweater">
+        <h1>Загрузка</h1>
+    </section>
+    <div id="addcity">
+        <h2 id="mycities">Избранное</h2>
+        <div id="plus">
+            <button id="plusplus" onclick="addcity()">+</button>
+            <label style="margin-right: 4%">
+                <input id="add" placeholder="Введите название города">
+            </label>
+        </div>
+    </div>
+    <section id="othercities">
+    </section>
+    <script type="text/javascript">
+        for (let i = 0; i < window.localStorage.length; i++){
+            document.querySelector("#othercities").innerHTML +="<section id=\"city"+ i +"\">\n" +
+                "            <h3>Загрузка</h3>\n" +
+                "        </section>"
+        }
+    </script>
+</main>
 </body>
 </html>
