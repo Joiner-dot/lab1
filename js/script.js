@@ -45,7 +45,7 @@ function showlocation(position) {
     var lat = position.coords.latitude
     var lon = position.coords.longitude
 
-    let url = `http://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&lang=ru&units=metric&lat=${lat}&lon=${lon}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&lang=ru&units=metric&lat=${lat}&lon=${lon}`;
     try {
         axios.get(url).then(res => {
             printthisweater(res)
