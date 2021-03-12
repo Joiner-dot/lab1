@@ -4,7 +4,8 @@ let count = 0
 function buttonwith() {
 
     var width = document.documentElement.clientWidth
-    if (width < 800) {
+    console.log(width)
+    if (width < 1000) {
         document.getElementById("locationburron").innerHTML = "<img id=\"reloadicon\" src=\"image/93638.png\">"
     } else {
         document.getElementById("locationburron").innerHTML = "Обновить геолокацию"
@@ -45,11 +46,12 @@ function showlocation(position) {
     var lon = position.coords.longitude
 
     let url = `http://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&lang=ru&units=metric&lat=${lat}&lon=${lon}`;
-   try{ axios.get(url).then(res => {
-        printthisweater(res)
-    })}
-    catch (e) {
-       alert(e)
+    try {
+        axios.get(url).then(res => {
+            printthisweater(res)
+        })
+    } catch (e) {
+        alert(e)
     }
 }
 
@@ -102,7 +104,7 @@ function notReceived() {
 window.onload = function () {
     //кнопка
     var width = document.documentElement.clientWidth
-    if (width < 800) {
+    if (width < 1000) {
         document.getElementById("locationburron").innerHTML = "<img id=\"reloadicon\" src=\"image/93638.png\">"
     } else {
         document.getElementById("locationburron").innerHTML = "Обновить геолокацию"
@@ -110,7 +112,7 @@ window.onload = function () {
     //текущие координаты
     if (navigator.geolocation) {
         console.log("123")
-        navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 10000})
+        navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 100000})
     } else {
         city = "Москва"
         let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
