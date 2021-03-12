@@ -91,7 +91,7 @@ function notReceived() {
     alert("Ошибка вашего местоположения, поэтому берем дефолтный город")
 
     city = "Москва"
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
     try {
         axios.get(url).then(res => {
             printthisweater(res)
