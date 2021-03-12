@@ -112,7 +112,7 @@ window.onload = function () {
     //текущие координаты
     if (navigator.geolocation) {
         console.log("123")
-        navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 100000})
+        navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 10000})
     } else {
         city = "Москва"
         let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
