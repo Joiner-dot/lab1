@@ -115,7 +115,7 @@ window.onload = function () {
         navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 10000})
     } else {
         city = "Москва"
-        let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
         axios.get(url).then(res => {
             printthisweater(res)
         })
@@ -123,7 +123,7 @@ window.onload = function () {
     //отсальные города
     for (let i = 0; i < window.localStorage.length; i++) {
         let city = window.localStorage.getItem(i)
-        let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
         axios.get(url).then(res => {
             printothercity(res, i)
         })
@@ -132,7 +132,7 @@ window.onload = function () {
 
 function updatethisweather() {
     let city = document.getElementById("currentlocation").textContent
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
     try {
         axios.get(url).then(res => {
             printthisweater(res)
@@ -149,7 +149,7 @@ function addcity() {
     count++
     console.log(window.localStorage)
     let city = document.getElementById("add").value
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
     try {
         axios.get(url).then(res => {
             count2 = window.localStorage.length - 1
