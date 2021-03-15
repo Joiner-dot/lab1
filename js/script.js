@@ -12,7 +12,7 @@ window.onload = function () {
         getresotherweather(url, i)
     }
 }
-
+//Запрос погоды по геолокации
 function showlocation(position) {
     var lat = position.coords.latitude
     var lon = position.coords.longitude
@@ -20,7 +20,7 @@ function showlocation(position) {
     let url = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&lang=ru&units=metric&lat=${lat}&lon=${lon}`
     getresthisweather(url)
 }
-
+//Запрос погоды дефолтного города
 function notReceived() {
     alert("Ошибка вашего местоположения, поэтому берем дефолтный город")
 
