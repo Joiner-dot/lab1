@@ -225,7 +225,8 @@
     #plus {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;        float: right;
+        justify-content: flex-end;
+        float: right;
         font-size: 4vmin;
         width: 60%;
     }
@@ -300,7 +301,7 @@ ul {
     margin-top: 3em;
 }
 
-#add{
+#add {
     width: 150%;
     font-size: 0.7em;
 }

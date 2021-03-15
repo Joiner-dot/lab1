@@ -4,7 +4,7 @@ window.onload = function () {
     //кнопка "обновить геолокацию"
     buttonwith()
     //текущие координаты
-        navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 10000})
+    navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 10000})
     //остальные города
     for (let i = 1; i < window.localStorage.length; i++) {
         let city = window.localStorage.getItem(i)
@@ -12,6 +12,7 @@ window.onload = function () {
         getresotherweather(url, i)
     }
 }
+
 //Запрос погоды по геолокации
 function showlocation(position) {
     var lat = position.coords.latitude
@@ -20,6 +21,7 @@ function showlocation(position) {
     let url = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&lang=ru&units=metric&lat=${lat}&lon=${lon}`
     getresthisweather(url)
 }
+
 //Запрос погоды дефолтного города
 function notReceived() {
     alert("Ошибка вашего местоположения, поэтому берем дефолтный город")
@@ -158,7 +160,7 @@ async function addcity() {
             window.localStorage.setItem(window.localStorage.length, res.data.name)
             let count = window.localStorage.length - 1
             document.querySelector("#othercities").innerHTML +=
-                "<section id=\"city"+ count +"\">            " +
+                "<section id=\"city" + count + "\">            " +
                 "<h3 class=\"nameofothercity\">Загрузка</h3>\n" +
                 "            <p class=\"graofothercity\"></p>\n" +
                 "            <img class=\"othercityicon\">\n" +
