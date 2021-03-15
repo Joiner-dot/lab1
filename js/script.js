@@ -1,7 +1,6 @@
 let apiKey = window.localStorage.getItem("apiKey");
 
 window.onload = function () {
-    window.localStorage.clear()
     window.localStorage.setItem("apiKey", "275483d966e6fd1ad712f36660db4ea6")
     //кнопка "обновить геолокацию"
     buttonwith()
