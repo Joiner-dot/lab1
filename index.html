@@ -15,7 +15,11 @@
 </header>
 <main>
     <section id="thisweater">
-        <h1>Загрузка</h1>
+        <h2 id="currentlocation">Загрузка...</h2>
+        <img id="currentlocationicon"/>
+        <h2 id="currentgrad"></h2>
+        <ul id="contain">
+        </ul>
     </section>
     <div id="addcity">
         <h2 id="mycities">Избранное</h2>
@@ -29,10 +33,16 @@
     <section id="othercities">
     </section>
     <script type="text/javascript">
-        for (let i = 0; i < window.localStorage.length; i++) {
-            document.querySelector("#othercities").innerHTML += "<section id=\"city" + i + "\">\n" +
-                "            <h3>Загрузка</h3>\n" +
-                "            </section>"
+        for (let i = 1; i < window.localStorage.length; i++) {
+            document.querySelector("#othercities").innerHTML +=
+                "<section id=\"city"+ i +"\">            " +
+                "<h3 class=\"nameofothercity\">Загрузка</h3>\n" +
+                "            <p class=\"graofothercity\"></p>\n" +
+                "            <img class=\"othercityicon\">\n" +
+                "            <button class=\"x\">×</button>\n" +
+                "            <ul class=\"details\">\n" +
+                "            </ul>\n" +
+                "</section>"
         }
     </script>
 </main>
