@@ -85,24 +85,21 @@
     }
 
     #mycities {
-        display: inline;
-        text-align: left;
         font-size: 2.5vmax;
-        vertical-align: top;
-
+        width: 40%;
+        margin: 0;
     }
 
     #plus {
-        display: inline;
-        float: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
         font-size: 4vmin;
         width: 60%;
         margin-bottom: 0;
     }
 
     #plusplus {
-        display: inline;
-        float: right;
         background-color: gray;
         border-radius: 50%;
         width: 2.1em;
@@ -220,16 +217,15 @@
     }
 
     #mycities {
-        margin-top: 1.2em;
-        display: inline;
-        float: left;
+        width: 40%;
+        margin: 0;
         font-size: 5vmin;
     }
 
     #plus {
-        margin-top: 1.2em;
-        display: inline;
-        float: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;        float: right;
         font-size: 4vmin;
         width: 60%;
     }
@@ -299,8 +295,16 @@ ul {
 }
 
 #addcity {
+    width: 100%;
+    display: flex;
     margin-top: 3em;
 }
+
+#add{
+    width: 150%;
+    font-size: 0.7em;
+}
+
 
 
 
