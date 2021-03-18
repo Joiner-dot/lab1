@@ -165,7 +165,7 @@ async function addcity() {
                 "<h3 class=\"nameofothercity\">Загрузка</h3>\n" +
                 "            <p class=\"graofothercity\"></p>\n" +
                 "            <img class=\"othercityicon\">\n" +
-                "            <button class=\"x\">×</button>\n" +
+                "            <button class=\"x\" onclick='deletecity(this)'>×</button>\n" +
                 "            <ul class=\"details\">\n" +
                 "            </ul>\n" +
                 "</section>"
@@ -176,4 +176,22 @@ async function addcity() {
             alert(e)
         }
     }
+}
+
+function deletecity(id) {
+    let element = id.closest("section")
+    let city = element.getElementsByTagName("h3").item(0).textContent
+    for (let i = 1; i < window.localStorage.length; i++) {
+        if (city === window.localStorage.getItem(i)) {
+            console.log("123")
+            let count = i
+            for (let j = i + 1; j < window.localStorage.length; j++) {
+                let oldel = window.localStorage.getItem(j)
+                window.localStorage.setItem(count, oldel)
+                count++
+            }
+            window.localStorage.removeItem(window.localStorage.length - 1)
+        }
+    }
+    element.remove()
 }
