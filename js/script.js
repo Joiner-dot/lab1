@@ -183,7 +183,7 @@ async function addcity() {
 //Удаление города из избранного
 function deletecity(id) {
     let element = id.closest("section")
-    let city = element.getElementsByTagName("h3").item(0).textContent
+    let city = element.getElementsByTagName("div").item(0).getElementsByTagName("h3").item(0).textContent
     for (let i = 1; i < window.localStorage.length; i++) {
         if (city === window.localStorage.getItem(i)) {
             let count = i
