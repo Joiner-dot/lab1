@@ -132,6 +132,7 @@ function addtolist(ul, res) {
     ul.appendChild(li)
 }
 
+//Изменение кнопки при мобильной версии
 function buttonwith() {
 
     let width = document.documentElement.clientWidth;
@@ -177,13 +178,12 @@ async function addcity() {
         }
     }
 }
-
+//Удаление города из избранного
 function deletecity(id) {
     let element = id.closest("section")
     let city = element.getElementsByTagName("h3").item(0).textContent
     for (let i = 1; i < window.localStorage.length; i++) {
         if (city === window.localStorage.getItem(i)) {
-            console.log("123")
             let count = i
             for (let j = i + 1; j < window.localStorage.length; j++) {
                 let oldel = window.localStorage.getItem(j)
