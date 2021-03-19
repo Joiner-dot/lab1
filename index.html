@@ -16,17 +16,15 @@
 <main>
     <section id="thisweater">
         <h2 id="currentlocation">Загрузка...</h2>
-            <img id="currentlocationicon"/>
-            <h2 id="currentgrad"></h2>
-            <ul id="contain">
-            </ul>
+        <img id="currentlocationicon"/>
+        <h2 id="currentgrad"></h2>
+        <ul id="contain">
+        </ul>
     </section>
     <div id="addcity">
         <h2 id="mycities">Избранное</h2>
         <div id="plus">
-            <label style="margin-right: 4%">
-                <input id="add" placeholder="Введите название города">
-            </label>
+            <input id="add" placeholder="Введите название города">
             <button id="plusplus" onclick="addcity()">+</button>
         </div>
     </div>
@@ -36,12 +34,14 @@
         for (let i = 1; i < window.localStorage.length; i++) {
             document.querySelector("#othercities").innerHTML +=
                 "<section id=\"city" + i + "\">            " +
+                "<div class='classno'>" +
                 "<h3 class=\"nameofothercity\">Загрузка</h3>\n" +
-                "            <p class=\"graofothercity\"></p>\n" +
-                "            <img class=\"othercityicon\">\n" +
-                "            <button class=\"x\" onclick='deletecity(this)'>×</button>\n" +
-                "            <ul class=\"details\">\n" +
-                "            </ul>\n" +
+                "<p class=\"graofothercity\"></p>\n" +
+                "<img class=\"othercityicon\">\n" +
+                "<button class=\"x\" onclick='deletecity(this)'>×</button>\n" +
+                "</div>" +
+                "<ul class=\"details\">\n" +
+                "</ul>\n" +
                 "</section>"
         }
     </script>

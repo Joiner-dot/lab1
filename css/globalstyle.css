@@ -59,6 +59,8 @@
     }
 
     .wind {
+        display: flex;
+        justify-content: space-between;
         background-color: gray;
         padding: 10px;
         border-radius: 10px;
@@ -109,14 +111,12 @@
     }
 
     #othercities section {
-        display: inline;
         width: 100%;
         float: left;
         margin-top: 3em;
     }
 
     .x {
-        display: inline;
         float: right;
         background-color: gray;
         border-radius: 50%;
@@ -151,11 +151,11 @@
     }
 
     #weatrernow {
-        font-size: 5vmin;
+        font-size: 3vmax;
     }
 
     #currentlocation {
-        font-size: 5vmin;
+        font-size: 3vmax;
     }
 
 
@@ -189,17 +189,17 @@
     }
 
     .wind {
+        display: flex;
+        justify-content: space-between;
         background-color: gray;
         padding: 10px;
         border-radius: 10px;
         margin-bottom: 10px;
-        height: 4vmin;
         list-style-type: none;
     }
 
     .hh {
-        display: inline;
-        font-size: 3vmin;
+        font-size: 1.5vmax;
         float: left;
         margin: 0;
         vertical-align: center;
@@ -207,17 +207,16 @@
 
 
     p {
-        display: inline;
         margin: 0;
         float: right;
-        font-size: 3vmin;
+        font-size: 1.5vmax;
         vertical-align: center;
     }
 
     #mycities {
         width: 40%;
         margin: 0;
-        font-size: 5vmin;
+        font-size: 2.5vmax;
     }
 
     #plus {
@@ -251,20 +250,18 @@ input {
 }
 
 .nameofothercity {
-    display: inline;
     font-size: 2.5vmax;
 }
 
 .graofothercity {
-    display: inline;
     margin-left: 2vmax;
     font-size: 3.5vmax;
     float: none;
 }
 
 .othercityicon {
-    width: 3vmax;
-    height: 3vmax;
+    width: 5vmax;
+    height: 5vmax;
     margin-left: 1vmax;
 }
 
@@ -300,6 +297,12 @@ ul {
 }
 
 #add {
-    width: 110%;
-    font-size: 0.7em;
+    font-size: 1.2vmax;
 }
+
+.classno{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

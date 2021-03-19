@@ -163,10 +163,12 @@ async function addcity() {
             let count = window.localStorage.length - 1
             document.querySelector("#othercities").innerHTML +=
                 "<section id=\"city" + count + "\">            " +
+                "<div class='classno'>" +
                 "<h3 class=\"nameofothercity\">Загрузка</h3>\n" +
                 "            <p class=\"graofothercity\"></p>\n" +
                 "            <img class=\"othercityicon\">\n" +
                 "            <button class=\"x\" onclick='deletecity(this)'>×</button>\n" +
+                "</div>" +
                 "            <ul class=\"details\">\n" +
                 "            </ul>\n" +
                 "</section>"
