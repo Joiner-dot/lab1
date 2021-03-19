@@ -294,6 +294,7 @@ ul {
     width: 100%;
     display: flex;
     margin-top: 3em;
+    align-items: center;
 }
 
 #add {
