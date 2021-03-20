@@ -5,7 +5,11 @@
     <title>Weather</title>
     <link rel="stylesheet" href="css/globalstyle.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/geolocation.js"></script>
+    <script src="js/addAndDelete.js"></script>
+    <script src="js/printcities.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/button.js"></script>
 </head>
 <body onresize="buttonwith()">
 
@@ -30,21 +34,41 @@
     </div>
     <section id="othercities">
     </section>
-    <script type="text/javascript">
-        for (let i = 1; i < window.localStorage.length; i++) {
-            document.querySelector("#othercities").innerHTML +=
-                "<section id=\"city" + i + "\">            " +
-                "<div class='classno'>" +
-                "<h3 class=\"nameofothercity\">Загрузка</h3>\n" +
-                "<p class=\"graofothercity\"></p>\n" +
-                "<img class=\"othercityicon\">\n" +
-                "<button class=\"x\" onclick='deletecity(this)'>×</button>\n" +
-                "</div>" +
-                "<ul class=\"details\">\n" +
-                "</ul>\n" +
-                "</section>"
-        }
-    </script>
 </main>
+<template id="template-othercity">
+    <div class="classno">
+        <h3 class="nameofothercity"></h3>
+        <p class="graofothercity"></p>
+        <img class="othercityicon" src="">
+        <button class="x" onclick="deletecity(this)">×</button>
+    </div>
+    <ul class="details">
+    </ul>
+</template>
+<template id="loader">
+    <h3 class="nameofothercity">Загрузка</h3>
+</template>
+<template id="template-contain">
+    <li class="wind">
+        <p class="hh">Ветер</p>
+        <p></p>
+    </li>
+    <li class="wind">
+        <p class="hh">Облачность</p>
+        <p></p>
+    </li>
+    <li class="wind">
+        <p class="hh">Давление</p>
+        <p></p>
+    </li>
+    <li class="wind">
+        <p class="hh">Влажность</p>
+        <p></p>
+    </li>
+    <li class="wind">
+        <p class="hh">Координаты</p>
+        <p></p>
+    </li>
+</template>
 </body>
 </html>
