@@ -57,5 +57,4 @@ function printothercity(res, count3) {
     section.innerHTML = ""
     var clone = document.importNode(template.content, true);
     section.appendChild(clone)
-    document.getElementById("othercities").appendChild(section)
 }
