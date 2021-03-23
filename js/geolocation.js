@@ -5,14 +5,15 @@ window.onload = function () {
     //кнопка "обновить геолокацию"
     buttonwith()
     //текущие координаты
-    navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 1000})
+    navigator.geolocation.getCurrentPosition(showlocation, notReceived, {timeout: 10000})
     //остальные города
     printpreloader()
+    let urls = []
     for (let i = 1; i < window.localStorage.length; i++) {
         let city = window.localStorage.getItem(i)
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
-        fetchotherweather(url,i)
+        urls.push(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`);
     }
+    fetchallcities(urls)
 }
 
 //Запрос погоды по геолокации

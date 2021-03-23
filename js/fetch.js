@@ -21,3 +21,17 @@ async function fetchotherweather(url, i) {
         alert(e)
     }
 }
+
+async function fetchallcities(urls) {
+    let count = 1
+    try {
+        let requests = await urls.map(url => fetch(url, {
+            "method": "GET",
+        }));
+        let responces = await Promise.all(requests)
+        responces = await Promise.all(responces.map(r => r.json()))
+        responces.forEach(responce => printothercity(responce, count++))
+    } catch (e) {
+        alert(e)
+    }
+}
