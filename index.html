@@ -11,11 +11,11 @@
     <script src="js/fetch.js"></script>
     <script src="js/button.js"></script>
 </head>
-<body onresize="buttonwith()">
+<body onresize="buttonWidth()">
 
 <header>
     <h1 id="weatrernow">Погода здесь</h1>
-    <button id="locationburron" onclick="updatethisweather()">Обновить геолокацию</button>
+    <button id="locationburron" onclick="updateCurrentWeather()">Обновить геолокацию</button>
 </header>
 <main>
     <section id="thisweater">
@@ -29,7 +29,7 @@
         <h2 id="mycities">Избранное</h2>
         <div id="plus">
             <input id="add" placeholder="Введите название города">
-            <button id="plusplus" onclick="addcity()">+</button>
+            <button id="plusplus" onclick="addCity()">+</button>
         </div>
     </div>
     <section id="othercities">
@@ -40,7 +40,7 @@
         <h3 class="nameofothercity"></h3>
         <p class="graofothercity"></p>
         <img class="othercityicon" src="">
-        <button class="x" onclick="deletecity(this)">×</button>
+        <button class="x" onclick="deleteCity(this)">×</button>
     </div>
     <ul class="details">
     </ul>

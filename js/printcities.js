@@ -1,4 +1,4 @@
-function printpreloader () {
+function printLoader () {
     let template = document.getElementById("loader")
     for(let i = 1; i < window.localStorage.length; i++){
         var section = document.createElement("section")
@@ -11,7 +11,7 @@ function printpreloader () {
 }
 
 
-function printthisweater(res) {
+function printCurrentWeather(res) {
     let section = document.querySelector("#thisweater")
     section.querySelector("#currentlocation").textContent = res.name
     section.querySelector("#currentgrad").textContent = Math.ceil((res.main.temp) * 10) / 10 + "°C"
@@ -19,11 +19,11 @@ function printthisweater(res) {
         + res.weather[0].main.toLowerCase()
         + ".png"
     let ul = document.querySelector("#contain")
-    addtolist(ul, res)
+    addToList(ul, res)
 }
 
 //Работа с показателями ветра, давления, влажности и координат и добавление их в список
-function addtolist(ul, res) {
+function addToList(ul, res) {
     ul.innerHTML = ""
     let template = document.querySelector("#template-contain")
     let parameters = template.content.querySelectorAll("p")
@@ -39,7 +39,7 @@ function addtolist(ul, res) {
 
 
 //Печать избранного города
-function printothercity(res, count3) {
+function printListCities(res, count3) {
     let name = "city" + count3
 
     //Определяем значения
@@ -52,7 +52,7 @@ function printothercity(res, count3) {
         + ".png"
 
     let ul = template.content.querySelector(".details")
-    addtolist(ul, res)
+    addToList(ul, res)
     let section = document.getElementById(name)
     section.innerHTML = ""
     var clone = document.importNode(template.content, true);

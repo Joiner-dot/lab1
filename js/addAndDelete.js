@@ -1,5 +1,5 @@
 //Добавление нового города
-async function addcity() {
+async function addCity() {
     let res;
     if (document.getElementById("add").value !== "") {
         try {
@@ -21,7 +21,7 @@ async function addcity() {
             var clone = document.importNode(template.content, true);
             section.appendChild(clone)
             document.getElementById("othercities").appendChild(section)
-            fetchotherweather(url, count)
+            fetchCityWeather(url, count)
 
         } catch (e) {
             alert(e)
@@ -30,7 +30,7 @@ async function addcity() {
 }
 
 //Удаление города из избранного
-function deletecity(id) {
+function deleteCity(id) {
     let element = id.closest("section")
     let city = element.getElementsByTagName("div").item(0).getElementsByTagName("h3").item(0).textContent
     for (let i = 1; i < window.localStorage.length; i++) {

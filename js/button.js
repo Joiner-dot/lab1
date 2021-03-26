@@ -1,5 +1,5 @@
 //Изменение кнопки при мобильной версии
-function buttonwith() {
+function buttonWidth() {
 
     let width = document.documentElement.clientWidth;
     if (width < 1000) {
