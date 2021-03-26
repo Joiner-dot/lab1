@@ -31,8 +31,7 @@ window.onload = async function () {
 function showLocation(position) {
     var lat = position.coords.latitude
     var lon = position.coords.longitude
-    let url = urlLatLon(lat,lon)
-    fetchCurrentWeather(url)
+    fetchLatLonCurrentWeather(lat,lon)
 }
 
 //Запрос погоды дефолтного города
@@ -40,8 +39,7 @@ function notReceived() {
     alert("Ошибка вашего местоположения, поэтому берем дефолтный город")
 
     let city = "Москва"
-    let url = urlCity(city);
-    fetchCurrentWeather(url)
+    fetchCityCurrentWeather(city)
 }
 
 

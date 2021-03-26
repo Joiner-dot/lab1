@@ -21,7 +21,7 @@ async function addCity() {
             var clone = document.importNode(template.content, true);
             section.appendChild(clone)
             document.getElementById("othercities").appendChild(section)
-            fetchCityWeather(url, count)
+            fetchCityWeather(city, count)
 
         } catch (e) {
             alert(e)

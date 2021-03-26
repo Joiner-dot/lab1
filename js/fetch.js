@@ -1,5 +1,18 @@
 //отправка запроса и печать погоды по геолокации
-async function fetchCurrentWeather(url) {
+async function fetchCityCurrentWeather(city) {
+    let url = urlCity(city)
+    try {
+        let response = await fetch(url, {
+            "method": "GET",
+        });
+        printCurrentWeather(await response.json())
+    } catch (e) {
+        alert(e)
+    }
+}
+
+async function fetchLatLonCurrentWeather(lat, lon) {
+    let url = urlLatLon(lat,lon)
     try {
         let response = await fetch(url, {
             "method": "GET",
@@ -11,7 +24,7 @@ async function fetchCurrentWeather(url) {
 }
 
 //отправка запроса и печать погоды избранных городов
-async function fetchCityWeather(url, i) {
+async function fetchCityWeather(city, i) {
     try {
         let response = await fetch(url, {
             "method": "GET",
