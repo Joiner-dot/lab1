@@ -45,6 +45,7 @@ function notReceived() {
 
 //Обновить геолокацию
 function updateCurrentWeather() {
+    loaderIcon()
     navigator.geolocation.getCurrentPosition(showLocation, notReceived, {timeout: 10000})
 }
 
@@ -56,4 +57,11 @@ function urlLatLon(lat, long) {
 
 function urlCity(city){
    return `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`
+}
+
+function loaderIcon (){
+    document.querySelector("#currentlocationicon").src = "image/14285.png"
+    document.querySelector("#currentlocation").textContent = ""
+    document.querySelector("#currentgrad").textContent = ""
+    document.querySelector("#contain").innerHTML = ""
 }
