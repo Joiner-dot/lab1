@@ -25,6 +25,7 @@ async function fetchLatLonCurrentWeather(lat, lon) {
 
 //отправка запроса и печать погоды избранных городов
 async function fetchCityWeather(city, i) {
+    let url = urlCity(city)
     try {
         let response = await fetch(url, {
             "method": "GET",

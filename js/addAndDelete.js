@@ -4,7 +4,7 @@ async function addCity() {
     if (document.getElementById("add").value !== "") {
         try {
             let city = document.getElementById("add").value
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${apiKey}`;
+            let url = urlCity(city);
             res = await axios.get(url)
 
             //Проверка города на уже существующий город в списке
