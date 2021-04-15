@@ -1,6 +1,6 @@
-function printLoader () {
+function printLoader (data) {
     let template = document.getElementById("loader")
-    for(let i = 1; i < window.localStorage.length; i++){
+    for(let i = 0; i < data.length; i++){
         var section = document.createElement("section")
         section.setAttribute("id", "city" + i)
         var clone
@@ -50,7 +50,6 @@ function printListCities(res, count3) {
     template.content.querySelector(".othercityicon").src = "image/day_"
         + res.weather[0].main.toLowerCase()
         + ".png"
-
     let ul = template.content.querySelector(".details")
     addToList(ul, res)
     let section = document.getElementById(name)

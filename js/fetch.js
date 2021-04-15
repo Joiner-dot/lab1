@@ -1,38 +1,55 @@
-//отправка запроса и печать погоды по геолокации
-async function fetchCityCurrentWeather(city) {
-    let url = urlCity(city)
-    try {
-        let response = await fetch(url, {
-            "method": "GET",
-        });
-        printCurrentWeather(await response.json())
-    } catch (e) {
-        alert(e)
+async function fetchCityByName(cityName) {
+    let data = await fetch(`http://localhost:27665/weather/city?q=${cityName}`);
+    if (data.status === 200) {
+        printCurrentWeather(await data.json())
+    } else {
+        alert(new Error(`Bad request ${data.status}`));
     }
 }
 
-async function fetchLatLonCurrentWeather(lat, lon) {
-    let url = urlLatLon(lat,lon)
-    try {
-        let response = await fetch(url, {
-            "method": "GET",
-        });
-        printCurrentWeather(await response.json())
-    } catch (e) {
-        alert(e)
+async function fetchCityByLocation(lat, lon) {
+    let data = await fetch(`http://localhost:27665/weather/coordinates?lat=${lat}&lon=${lon}`);
+    if (data.status === 200) {
+        printCurrentWeather(await data.json())
+    } else {
+        alert(new Error(`Bad request ${data.status}`));
     }
 }
 
-//отправка запроса и печать погоды избранных городов
-async function fetchCityWeather(city, i) {
-    let url = urlCity(city)
-    try {
-        let response = await fetch(url, {
-            "method": "GET",
-        });
-        printListCities(await response.json(), i)
-    } catch (e) {
-        alert(e)
+async function fetchByName(cityName, i) {
+    let data = await fetch(`http://localhost:27665/weather/city?q=${cityName}`);
+    if (data.status === 200) {
+        printListCities(await data.json(), i)
+    } else {
+        alert(new Error(`Bad request ${data.status}`));
+    }
+}
+
+
+async function fetchGetFavourites() {
+    let data = await fetch("http://localhost:27665/favourites", {
+        "method": "GET",
+    });
+    if (data.status === 200) {
+        return await data.json();
+    }
+    throw new Error(`Bad request ${data.status}`);
+}
+
+async function fetchAddCity(cityName) {
+    let data = await fetch(`http://localhost:27665/favourites?q=${cityName}`, {method: "POST"});
+    if (data.status === 200) {
+        return await data.json();
+    } else if (data.status === 600) {
+        return false;
+    }
+    throw new Error(`Bad request ${data.status}`);
+}
+
+async function fetchDeleteCity(cityName) {
+    let data = await fetch(`http://localhost:27665/favourites?q=${cityName}`, {method: "DELETE"});
+    if (data.status !== 200) {
+        alert(new Error(`Bad request ${data.status}`));
     }
 }
 
