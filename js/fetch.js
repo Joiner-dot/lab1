@@ -1,5 +1,5 @@
 async function fetchCityByName(cityName) {
-    let data = await fetch(`http://localhost:27665/weather/city?q=${cityName}`);
+    let data = await fetch(`https://server-apppppp.herokuapp.com/weather/city?q=${cityName}`);
     if (data.status === 200) {
         printCurrentWeather(await data.json())
     } else {
@@ -8,7 +8,7 @@ async function fetchCityByName(cityName) {
 }
 
 async function fetchCityByLocation(lat, lon) {
-    let data = await fetch(`http://localhost:27665/weather/coordinates?lat=${lat}&lon=${lon}`);
+    let data = await fetch(`https://server-apppppp.herokuapp.com/weather/coordinates?lat=${lat}&lon=${lon}`);
     if (data.status === 200) {
         printCurrentWeather(await data.json())
     } else {
@@ -17,7 +17,7 @@ async function fetchCityByLocation(lat, lon) {
 }
 
 async function fetchByName(cityName, i) {
-    let data = await fetch(`http://localhost:27665/weather/city?q=${cityName}`);
+    let data = await fetch(`https://server-apppppp.herokuapp.com/weather/city?q=${cityName}`);
     if (data.status === 200) {
         printListCities(await data.json(), i)
     } else {
@@ -27,7 +27,7 @@ async function fetchByName(cityName, i) {
 
 
 async function fetchGetFavourites() {
-    let data = await fetch("http://localhost:27665/favourites", {
+    let data = await fetch("https://server-apppppp.herokuapp.com/favourites", {
         "method": "GET",
     });
     if (data.status === 200) {
@@ -37,7 +37,7 @@ async function fetchGetFavourites() {
 }
 
 async function fetchAddCity(cityName) {
-    let data = await fetch(`http://localhost:27665/favourites?q=${cityName}`, {method: "POST"});
+    let data = await fetch(`https://server-apppppp.herokuapp.com/favourites?q=${cityName}`, {method: "POST"});
     if (data.status === 200) {
         return await data.json();
     } else if (data.status === 600) {
@@ -47,7 +47,7 @@ async function fetchAddCity(cityName) {
 }
 
 async function fetchDeleteCity(cityName) {
-    let data = await fetch(`http://localhost:27665/favourites?q=${cityName}`, {method: "DELETE"});
+    let data = await fetch(`https://server-apppppp.herokuapp.com/favourites?q=${cityName}`, {method: "DELETE"});
     if (data.status !== 200) {
         alert(new Error(`Bad request ${data.status}`));
     }

@@ -14,7 +14,7 @@ let onSucess = async (data) => {
     let cities = data.favouriteCities;
     printLoader(cities)
     try {
-        let requests = await cities.map(cityName => fetch(`http://localhost:27665/weather/city?q=${cityName}`));
+        let requests = await cities.map(cityName => fetch(`https://server-apppppp.herokuapp.com/weather/city?q=${cityName}`));
         let responces = await Promise.all(requests)
         responces = await Promise.all(responces.map(r => r.json()))
         responces.forEach(responce => printListCities(responce, count++))
